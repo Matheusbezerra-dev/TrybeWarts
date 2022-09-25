@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trybewarts</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <img class="trybewarts-header-logo" src="./images/trybewarts-header-logo.svg" />
+    <h1 id="trybewarts-header-title">Trybewarts</h1>
+    <form class="trybewarts-login">
+      <div>
+        <input class="form-control" type="email" name="email" id="email" required placeholder="Email">
+      </div>
+      <div>
+        <input class="form-control" type="password" name="password" id="password" required placeholder="Senha">
+      </div>
+      <button id="btn-login" class="btn btn-primary" type="submit">Entrar</button>
+    </form>
+  </header>
+  <main id="main-container">
+    <form id="evaluation-form" method="post">
+      <h4 class="center">Fomulário de Avaliação</h4>
+      <section class="section-row">
+        <input class="form-control" type="text" name="nome" id="input-name" placeholder="Nome" />
+        <input class="form-control" type="text" name="lastname" id="input-lastname" placeholder="Sobrenome" />
+      </section>
+      <section class="section-row">
+        <input class="form-control" type="email" name="email" id="input-email" placeholder="Email" />
+        <label id="select-label">Casa:
+          <select class="form-select" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+      </section>
+      </label>
+      <section id="options-container" class="section-row">
+        <section id="family-section"></section>
+        <section id="checkbox-section"></section>
+      </section>
+      <section id="radio-section" class="section-row"></section>
+      <section class="section-row" id="section-row">
+        <label class="textarea" id="commentary">Deixe seu comentário:
+          <textarea id="textarea" class="form-control" cols="30" rows="10" maxlength="500"></textarea>
+          <span id="counter-span">
+            <span id="counter"></span>
+            / 500
+          </span>
+        </label>
+      </section>
+      <section id="agreement-section" class="section-row">
+        <label id="label-infos" for="">Você concorda com o uso das informações acima?</label>
+        <input type="checkbox" id="agreement">
+      </section>
+      <section class="section-row">
+        <button type="submit" id="submit-btn" class="btn btn-primary" disabled>Enviar</button>
+      </section>
+    </form>
+    <img id="trybewarts-forms-logo" src="./images/trybewarts-colored.svg">
+  </main>
+  <footer>
+    <span>Direitos reservados à Trybewarts©</span>
+  </footer>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
